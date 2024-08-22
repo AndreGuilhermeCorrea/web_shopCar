@@ -109,7 +109,7 @@
 
 #car-list .list-group-item.new-car {
     border: none;
-    background-color: #c1fdff80;
+    background-color: #96969680;
 }
 
 #car-list-title {
@@ -152,4 +152,13 @@
 
 .new-car .new-car-label {
     display: block;
+}
+
+
+/*rodapé*/
+footer {
+    text-align: center;
+    padding: 1px;
+    color: #757474;
+    font-size: .8rem;
 }
