@@ -21,6 +21,9 @@ const ShopCar = db.define('shopCar', {
     cor: {
         type: sequelize.STRING,
     },
+    caracteristica:{
+        type: sequelize.STRING,
+    },
     new_car: {
         type: sequelize.INTEGER,
     },
