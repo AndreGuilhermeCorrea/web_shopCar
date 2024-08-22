@@ -1,0 +1,29 @@
+{
+  "name": "web_shopcar",
+  "version": "1.0.0",
+  "description": "Shopping web_car Node",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndreGuilhermeCorrea/web_shopCar.git"
+  },
+  "author": "Andre Guilherme Correa <de_correa@msn.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AndreGuilhermeCorrea/web_shopCar/issues"
+  },
+  "homepage": "https://github.com/AndreGuilhermeCorrea/web_shopCar#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.19.2",
+    "express-handlebars": "^8.0.1",
+    "sequelize": "^6.37.3",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}
