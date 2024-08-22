@@ -131,3 +131,5 @@ dist
 
 # json
 package-lock.json
+
+db/index.db
