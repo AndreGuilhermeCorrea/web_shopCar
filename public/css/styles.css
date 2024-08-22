@@ -1,3 +1,155 @@
-h1{
-    color: red;
+* {
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif
+}
+
+/* nav */
+.navbar {
+    padding: 1rem;
+    border-bottom: 1px solid #CCC;
+}
+
+.navbar .nav-item a {
+    color: #212529;
+}
+
+.nav-item {
+    margin: 0 10px;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding: 10px 25px;
+    font-weight: bold;
+}
+
+.navbar .nav-item .btn {
+    color: #FFF;
+    background-color: #000000;
+    border: 1px solid transparent;
+    border-radius: 0;
+}
+
+.nav-link.btn.btn-primary:hover,
+#search-form button:hover,
+.list-group-item a:hover,
+#form-box button:hover {
+    background-color: #f8f7f7;
+    color: #000000;
+    border-color: #000000;
+}
+
+/* banner */
+#top-container {
+    padding: 110px;
+    background-color: #F7F9FC;
+    border-bottom: 4px solid #2a2a2b;
+    margin-bottom: 30px;
+    background-image: url("../img/banner.jpg");
+    background-position: 0 100px;
+    background-size: cover;
+    color: #FFF;
+}
+
+
+#main-title {
+    padding: 30px 0;
+    font-size: 3rem;
+}
+
+#main-subtitle {
+    font-size: 1rem;
+    padding-bottom: 80px;
+}
+
+/* form */
+
+#search-form {
+    padding: 30px 100px;
+}
+
+#search-form .col-md-10,
+#search-form .col-md-2 {
+    padding: 0;
+}
+
+#search-form input,
+#search-form button {
+    width: 100%;
+    border-radius: 0;
+    height: 50px;
+    font-size: 18px;
+    border: 2px solid #242424;
+}
+
+#search-form button {
+    color: #FFF;
+    background-color: #242424;
+    border: 1px solid transparent;
+}
+
+/* lista */
+
+#car-container {
+    padding: 0 100px;
+    padding-bottom: 50px;
+}
+
+#car-list .list-group-item {
+    margin-bottom: 8px;
+    border: 1px solid #CCC;
+    padding: 15px 80px;
+    color: #212529;
+    height: 120px;
+}
+
+#car-list .list-group-item p {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+#car-list .list-group-item.new-car {
+    border: none;
+    background-color: #c1fdff80;
+}
+
+#car-list-title {
+    margin-bottom: 35px;
+}
+
+.list-group-item img {
+    width: 80px;
+    border: 1px solid #242424;
+    border-radius: 50%;
+    background-color: #FFF;
+    position: absolute;
+    left: -40px;
+    top: calc(50% - 40px);
+}
+
+.list-group-item a {
+    position: absolute;
+    right: 20px;
+    top: 35px;
+    height: 50px;
+    line-height: 35px;
+    background-color: #000000;
+    border: 1px solid transparent;
+    border-radius: 0;
+    color: #FFF;
+}
+
+.new-car-label {
+    background-color: #FFD500;
+    color: #000000;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 5px 10px;
+    position: absolute;
+    right: 250px;
+    top: 40px;
+    display: none;
+}
+
+.new-car .new-car-label {
+    display: block;
 }
