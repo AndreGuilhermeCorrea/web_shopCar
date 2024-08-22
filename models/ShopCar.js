@@ -1,12 +1,9 @@
 const sequelize = require('sequelize');
 
-const db = require('../db/connections');
+const db = require('../db/connection');
 
 const ShopCar = db.define('shopCar', {
-    title: {
-        type: sequelize.STRING,
-    },
-    description: {
+    titulo: {
         type: sequelize.STRING,
     },
     valor: {
@@ -24,7 +21,7 @@ const ShopCar = db.define('shopCar', {
     cor: {
         type: sequelize.STRING,
     },
-    new_shopCar: {
+    new_car: {
         type: sequelize.INTEGER,
     },
 });
