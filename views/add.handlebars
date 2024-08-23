@@ -1,0 +1,83 @@
+<div id="add-form-container" class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1 class="text-center">Divulgue o veículo preenchendo o formulário</h1>
+    </div>
+    <div id="form-box" class="col-md-12">
+      <h2>Preencha os dados da melhor forma possível para encontrar mais rápido
+        o futuro proprietário!</h2>
+      <form action="">
+        <div class="form-group">
+          <label for="title">Título:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="title"
+            name="title"
+            placeholder="Digite um título para o veículo"
+            required
+          />
+          <small id="titleHelp" class="form-text text-muted">O título é muito
+            importante, seja claro e objetivo.</small>
+        </div>
+        <div class="form-group">
+          <label for="caracteristicas">Caracteristicas:</label>
+          <textarea
+            type="text"
+            class="form-control"
+            id="caracteristicas"
+            name="caracteristicas"
+            placeholder="Descreva as características do veículo."
+            required
+          ></textarea>
+        </div>
+        <div class="form-group">
+          <label for="marca">Marca:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="marca"
+            name="marca"
+            placeholder="Digite a marca"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="modelo">Modelo:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="modelo"
+            name="modelo"
+            placeholder="Digite o Modeloo"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="ano">Ano:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="ano"
+            name="ano"
+            placeholder="Digite o ano"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="salary">Valor:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="valor"
+            name="valor"
+            placeholder="Digite o valor"
+            required
+          />
+        </div>
+        <input type="hidden" name="new_car" value="1" />
+        <button type="submit" class="btn btn-primary">Publicar</button>
+      </form>
+    </div>
+  </div>
+</div>

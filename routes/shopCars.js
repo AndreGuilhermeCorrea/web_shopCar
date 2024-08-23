@@ -1,11 +1,16 @@
 //rotas que adiciona shopCars ao projeto
 const express       = require('express');
 const router        = express.Router();
-const ShopCar       = require('../models/ShopCar');
+//const ShopCar       = require('../models/ShopCar');
 
 //rota de teste
 router.get('/test', (req,res)=>{
     res.send('deu');
+});
+
+//rota de busca do formulário
+router.get('/add', (req,res)=>{
+    res.render('add');
 });
 
 //post para adicionar shopCar 

@@ -4,6 +4,7 @@ const app = express();
 const path = require('path');
 const db = require('./db/connection');
 const bodyParser = require('body-parser');
+const ShopCar = require('./models/shopCar')
 
 const PORT = 3000;
 
@@ -41,7 +42,15 @@ db.authenticate()
 
 // Rotas
 app.get('/', (req, res) => {
-    res.render("index"); 
+    ShopCar.findAll({order: [
+        ['createdAt', 'DESC']
+    ]})
+    .then(shopCars =>{
+        res.render("index", {
+            shopCars
+        }); 
+    });
+    
 });
 
 // Cars routes
