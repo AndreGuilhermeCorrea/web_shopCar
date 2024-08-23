@@ -107,7 +107,10 @@ footer {
     border: 1px solid #CCC;
     padding: 15px 80px;
     color: #212529;
-    height: 120px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    position: relative;
 }
 
 #car-list .list-group-item p {
@@ -120,18 +123,39 @@ footer {
     background-color: #96969680;
 }
 
+#car-list .car-details {
+    flex: 1;
+}
+
+
+#car-list .car-info-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+#car-list .car-info-row p {
+    font-size: 14px;
+    margin: 0;
+    flex: 1;
+}
+
+#car-list .car-info-row p + p {
+    margin-left: 15px; /* Espaçamento entre os itens na mesma linha */
+}
+
 #car-list-title {
     margin-bottom: 35px;
 }
 
 .list-group-item img {
-    width: 80px;
+    width: 110px;
     border: 1px solid #242424;
     border-radius: 50%;
     background-color: #FFF;
     position: absolute;
     left: -40px;
-    top: calc(50% - 40px);
+    top: calc(60% - 40px);
 }
 
 .list-group-item a {
@@ -151,16 +175,20 @@ footer {
     color: #000000;
     text-transform: uppercase;
     font-weight: bold;
-    padding: 5px 10px;
+    padding: 5px 15px; /* Aumente o padding horizontal para criar a forma ovalada */
     position: absolute;
-    right: 250px;
-    top: 40px;
+    left: -8px; /* Ajuste a posição à direita */
+    top: 5px; /* Ajuste a posição no topo */
     display: none;
+    transform: rotate(-30deg); /* Rotaciona a etiqueta em 30 graus */
+    border-radius: 50px; /* Cria uma forma ovalada */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Adiciona uma sombra para destacar a etiqueta */
 }
 
 .new-car .new-car-label {
     display: block;
 }
+
 
 /* add page */
 
