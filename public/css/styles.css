@@ -110,6 +110,7 @@ footer {
   display: flex;
   align-items: center;
   position: relative;
+  flex-wrap: wrap;
 }
 
 #car-list .list-group-item p {
@@ -130,6 +131,7 @@ footer {
   display: flex;
   justify-content: space-between;
   margin-bottom: 5px;
+  flex-wrap: wrap;
 }
 
 #car-list .car-info-row p {
@@ -139,7 +141,7 @@ footer {
 }
 
 #car-list .car-info-row p + p {
-  margin-left: 15px; /* Espaçamento entre os itens na mesma linha */
+  margin-left: 15px;
 }
 
 #car-list-title {
@@ -173,14 +175,14 @@ footer {
   color: #000000;
   text-transform: uppercase;
   font-weight: bold;
-  padding: 5px 15px; /* Aumente o padding horizontal para criar a forma ovalada */
+  padding: 5px 15px;
   position: absolute;
-  left: -8px; /* Ajuste a posição à direita */
-  top: 5px; /* Ajuste a posição no topo */
+  left: -8px;
+  top: 5px;
   display: none;
-  transform: rotate(-30deg); /* Rotaciona a etiqueta em 30 graus */
-  border-radius: 50px; /* Cria uma forma ovalada */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Adiciona uma sombra para destacar a etiqueta */
+  transform: rotate(-30deg);
+  border-radius: 50px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .new-car .new-car-label {
@@ -233,49 +235,146 @@ footer {
 
 /*pagina view*/
 #shopCar-view-container {
-    margin-bottom: 100px;
-    margin-top: 100px;
-  }
+  margin-bottom: 100px;
+  margin-top: 100px;
+}
 
-  #shopCar-view-container h1 {
-    margin-bottom: 30px;
-  }
+#shopCar-view-container h1 {
+  margin-bottom: 30px;
+}
 #shopCar-view-container p {
   font-size: 1.3rem;
 }
 
-#img-container{
-    margin-top: 35px;
-    margin-bottom: 35px; 
+#img-container {
+  margin-top: 35px;
+  margin-bottom: 35px;
 }
 
-#img-container img{
-    width: 500px;
-    border-radius: 75%;
-    border: 1px solid #96969680;
+#img-container img {
+  width: 500px;
+  border-radius: 75%;
+  border: 1px solid #96969680;
 }
 
 .shopCar-desc {
   width: 100%;
 }
 
-.main-color{
-    color: #000000
+.main-color {
+  color: #000000;
 }
 .back-link {
   margin-left: 30px;
   border: 2px solid #000000;
   padding: 5px 10px;
-  transition: .5s;
+  transition: 0.5s;
 }
 
-.back-link:hover{
-    background-color: #000000;
-    color: #fff;
-    text-decoration: none;
+.back-link:hover {
+  background-color: #000000;
+  color: #fff;
+  text-decoration: none;
 }
 
-.bold{
-    font-weight: bold;
+.bold {
+  font-weight: bold;
 }
 
+/* Responsividade */
+@media (max-width: 481px) {
+  /* Ajuste do container */
+  #top-container {
+    padding: 50px;
+    background-position: center;
+  }
+
+  #main-title {
+    font-size: 2rem;
+  }
+
+  #main-subtitle {
+    font-size: 0.9rem;
+    padding-bottom: 50px;
+  }
+
+  /* Formulário de busca */
+  #search-form {
+    padding: 20px;
+  }
+
+  #search-form input,
+  #search-form button {
+    font-size: 16px; 
+    height: 40px; 
+  /* Lista de carros */
+  #car-container {
+    padding: 0 20px;
+  }
+
+  #car-list .list-group-item {
+    padding: 15px;
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+  }
+
+  #car-list .car-info-row {
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+
+  .list-group-item img {
+    position: relative;
+    left: 0;
+    top: 0;
+    margin-bottom: 10px;
+  }
+
+  .list-group-item a {
+    position: relative;
+    top: 0;
+    right: 0;
+    margin-top: 10px;
+  }
+
+  .new-car-label {
+    right: -8px;
+    left: auto;
+    top: 5px;
+    transform: rotate(30deg);
+  }
+
+  /* Formulário de adicionar */
+  #add-form-container {
+    margin-top: 100px;
+  }
+
+  #form-box {
+    padding: 20px;
+  }
+
+  #add-form-container h2 {
+    font-size: 20px;
+  }
+
+  #form-box button {
+    width: 100%;
+  }
+
+  /* Página de visualização */
+  #shopCar-view-container {
+    margin-bottom: 100px;
+    margin-top: 100px;
+  }
+
+  #img-container img {
+    width: 100%;
+    border-radius: 50%;
+  }
+
+  .back-link {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}
