@@ -4,7 +4,7 @@ const app = express();
 const path = require('path');
 const db = require('./db/connection');
 const bodyParser = require('body-parser');
-const ShopCar = require('./models/shopCar')
+const ShopCar = require('./models/ShopCar');
 
 const PORT = 3000;
 
