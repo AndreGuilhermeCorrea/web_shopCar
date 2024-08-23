@@ -305,8 +305,10 @@ footer {
 
   #search-form input,
   #search-form button {
-    font-size: 16px; 
-    height: 40px; 
+    font-size: 16px;
+    height: 40px;
+  }
+
   /* Lista de carros */
   #car-container {
     padding: 0 20px;
