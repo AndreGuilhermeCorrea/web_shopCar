@@ -8,6 +8,20 @@ router.get('/test', (req,res)=>{
     res.send('deu');
 });
 
+//rota de detalhe do veículo
+router.get("/view/:id", (req, res) =>
+  ShopCar.findOne({
+    where: { id: req.params.id },
+  })
+    .then((ShopCar) => {
+      res.render("view", {
+        ShopCar,
+      });
+    })
+    .catch((err) => console.log("Erro ao acessar o veículo", err))
+);
+
+
 //rota de busca do formulário
 router.get('/add', (req,res)=>{
     res.render('add');
