@@ -28,24 +28,26 @@
       <div class="col-md-12">
         <h2 id="car-list-title">Veja os destaque</h2>
         <ul id="car-list" class="list-group">
-          <li class="list-group-item new-car">
+          {{#each shopCars}}
+          <li class="list-group-item {{#if dataValues.new_car}} new-car {{/if}}" >
             <img src="/img/car.svg" alt="Car" />
             <div class="car-details">
-              <h3>Veículo</h3>
+              <h3>{{dataValues.titulo}}</h3>
               <div class="car-info-row">
-                <p>Marca: <span>Marca</span></p>
-                <p>Modelo: <span>Modelo</span></p>
+                <p>Marca: <span>{{dataValues.marca}}</span></p>
+                <p>Modelo: <span>{{dataValues.modelo}}</span></p>
               </div>
               <div class="car-info-row">
-                <p>Ano: <span>2023</span></p>
-                <p>Cor: <span>Preto</span></p>
+                <p>Ano: <span>{{dataValues.ano}}</span></p>
+                <p>Cor: <span>{{dataValues.cor}}</span></p>
               </div>
-              <p>Descrição: <span>Descrição do carro</span></p>
-              <h3>Valor: <span>R$100000,00</span></h3>
+              <p>Descrição: <span>{{dataValues.caracteristica}}</span></p>
+              <h3>Valor: <span>{{dataValues.valor}}</span></h3>
             </div>
             <span class="new-car-label">New</span>
             <a class="btn btn-primary">Apreciar</a>
           </li>
+          {{/each}}
         </ul>
       </div>
     </div>
