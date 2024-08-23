@@ -5,6 +5,8 @@ const path = require('path');
 const db = require('./db/connection');
 const bodyParser = require('body-parser');
 const ShopCar = require('./models/ShopCar');
+const Sequelize = require('sequelize');
+const Op = Sequelize.Op;
 
 const PORT = 3000;
 
@@ -42,15 +44,32 @@ db.authenticate()
 
 // Rotas
 app.get('/', (req, res) => {
-    ShopCar.findAll({order: [
-        ['createdAt', 'DESC']
-    ]})
-    .then(shopCars =>{
-        res.render("index", {
-            shopCars
-        }); 
-    });
-    
+    let search = req.query.shopCar;
+    let query = '%'+search+'%'
+
+    if(!search){
+        ShopCar.findAll({order: [
+            ['createdAt', 'DESC']
+        ]})
+        .then(shopCars =>{
+            res.render("index", {
+                shopCars
+            }); 
+        })
+        .catch(err => 
+            console.log("Erro ao fazer a busca", err));
+    }else{
+        ShopCar.findAll({
+            where: {titulo: {[Op.like]: query}},
+            order: [
+            ['createdAt', 'DESC']
+        ]})
+        .then(shopCars =>{
+            res.render("index", {
+                shopCars, search
+            }); 
+        });
+    }
 });
 
 // Cars routes

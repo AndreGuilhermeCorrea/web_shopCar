@@ -6,13 +6,13 @@
     Somos a loja com mais alto padrão em veículos no mercado, direcionadas a
     pessoas exigentes
   </p>
-  <form id="search-form" class="form-inline" action="">
+  <form id="search-form" class="form-inline" action="/" method="GET">
     <div class="form-group col-md-10">
       <input
         type="text"
         class="form-control"
-        id="car"
-        name="car"
+        id="shopCar"
+        name="shopCar"
         placeholder="Digite o veículo que está buscando"
       />
     </div>
@@ -26,7 +26,11 @@
   <div id="shopCars-container" class="container">
     <div class="row">
       <div class="col-md-12">
+        {{#if search}}
+        <h2 id="car-list-title">Buscando... {{search}}</h2>
+        {{else}}
         <h2 id="car-list-title">Veja os destaque</h2>
+        {{/if}}
         <ul id="car-list" class="list-group">
           {{#each shopCars}}
           <li class="list-group-item {{#if dataValues.new_car}} new-car {{/if}}" >
